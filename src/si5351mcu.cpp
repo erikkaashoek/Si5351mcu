@@ -86,7 +86,7 @@ void Si5351mcu::setFreq(uint8_t clk, unsigned long freq) {
     #endif
 
     // If output divider out of range
-    if (outdivider < 6) {   // low: below 6
+    if (outdivider < 4) {   // low: below 4 This is consistent wih the doc and the rest of the code
         // no go, this will no work.
         return;
     } else {                // high: above 900
